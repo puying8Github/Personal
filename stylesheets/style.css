@@ -58,7 +58,7 @@ a {
 }
 #container{
   width: 960px;
-  height: 1086px;
+  height: 900px;
   margin: 0 auto;
   background: url("../images/imgBG.png") no-repeat;
   background-size:100% 100%;
@@ -78,7 +78,7 @@ a {
   text-align: center;
 }
 #container #banner{
-   margin-top: 52px;
+   margin-top: 40px;
 position: relative;
 
 }
