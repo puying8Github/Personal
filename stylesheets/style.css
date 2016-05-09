@@ -1,0 +1,284 @@
+/**
+ * 重置css样式
+ */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,
+sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,
+tfoot,thead,tr,th,td,article,aside,canvas,details,
+embed,figure,figcaption,footer,header,hgroup,menu,
+nav,output,ruby,section,summary,time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baselline;
+
+}
+/**
+ * HTML5 元素不能用时使用，如IE8及以下浏览器
+ */
+article,aside,details,figcaption,
+figure,footer,header,hgroup,menu,nav,section,{
+  display:block;
+}
+body{
+  line-height:1;
+}
+ol,ul{
+  list-style:none;
+}
+blockquote,q{
+  quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after{
+  content:'';
+  content:none;
+}
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+canvas{
+  background-color:black;
+}
+body {
+
+  font: 14px "微软雅黑", Helvetica, Arial, sans-serif;
+  background-color: #000000;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+#container{
+  width: 960px;
+  height: 1086px;
+  margin: 0 auto;
+  background: url("../images/imgBG.png") no-repeat;
+  background-size:100% 100%;
+  position: relative;
+  color:#a4937d;
+}
+#container>h1{
+  padding-top: 30px;
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: 'Bernard MT Condensed';
+  text-align: center;
+}
+#container>p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+#container #banner{
+   margin-top: 52px;
+position: relative;
+
+}
+#bannerBg{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:370px;
+  background: url("../images/bannerBg_03.png") no-repeat;
+  background-size: 830px 370px ;
+  background-position: center;
+}
+#bannerImg{
+  position: relative;
+  width: 570px;
+  height: 310px;
+  top:30px;
+  left:192px;
+}
+#main{
+  width:580px;
+  height: 360px;
+  margin: 48px auto 0 auto;
+  background: url("../images/Bg_37.png") repeat;
+  background-size: 1px 15px;
+  border-bottom-right-radius:16px;
+  border-bottom-left-radius:16px ;
+  padding: 0 6px 6px 6px;
+}
+#mainInfo{
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color:#ccbc98 ;
+  border-bottom-right-radius:14px;
+  border-bottom-left-radius:14px ;
+}
+#mainInfo #nav{
+  width:100%;
+}
+#mainInfo #nav li{
+  float: left;
+  width: 25%;
+}
+#mainInfo #nav li a{
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Britannic Bold';
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  height: 60px;
+  color:#3f372d;
+}
+#About{
+  background: url("../images/img_03.png") no-repeat;
+  background-size: 100% 100%;
+}
+#Career{
+  background: url("../images/img_04.png") no-repeat;
+  background-size: 100% 100%;
+}
+#Expertise{
+  background: url("../images/img_05.png") no-repeat;
+  background-size: 100% 100%;
+}
+#Exhibitions{
+  background: url("../images/img_06.png") no-repeat;
+  background-size: 100% 100%;
+}
+#leftInfo{
+  float: left;
+  width: 374px;
+  height:294px;
+  padding: 5px 10px;
+  /*background-color: #00B7FF;*/
+  color:#675844;
+}
+#leftInfo h3{
+  font-size: 18px;
+  font-family: "Monotype Corsiva";
+  font-weight: bold;
+  color:#665a47;
+  border-bottom: 1px dotted #665a47;
+  padding:10px;
+}
+#leftInfo .resume{
+  /*padding:10px;*/
+}
+#leftInfo .resumeImg{
+  float: left;
+  background-color: #ae9870;
+  border-radius: 10px;
+  padding:4px;
+  width: 130px;
+  height: 80px;
+  margin: 8px;
+}
+#leftInfo .resumeText{
+  float: right;
+  margin: 8px;
+  width: 200px;
+}
+#leftInfo .resumeText ul li{
+  display: inline-block;
+  font-size: 13px;
+}
+#leftInfo .headImg{
+  display: block;
+  background: url("../images/headImg.jpg") no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+#rightInfo{
+  float: right;
+  width: 154px;
+  height: 274px;
+  background-color: rgba(131,112,88,0.8);
+  border-radius:12px ;
+  padding: 10px;
+}
+#rightInfo ul li a{
+  display: block;
+  width: 100%;
+  height: 90px;
+ background-color:#65563e;
+  border-radius: 10px;
+}
+#rightInfo ul li a span{
+  float: left;
+}
+#rightInfo ul li a span img{
+  width: 120px;
+  margin: 5px;
+}
+#rightInfo ul li{
+  clear: left;
+
+}
+.icon{
+  display: block;
+  width: 18px;
+  padding: 3px;
+  color:#c4ae86;
+  font-size: 12px;
+}
+.icon i{
+  display: block;
+  width: 13px;
+  height: 13px;
+  background: url("../images/img_47.png") no-repeat;
+  background-size: 13px 13px;
+}
+#mainSubject{
+  padding: 0 6px 6px 6px;
+}
+.evaluationText{
+  padding: 10px;
+}
+#aboutInfoList{
+  padding: 70px 10px 10px 10px;
+
+}
+#ExpertiseInfo{
+  padding: 70px 10px 10px 10px;
+  color:#665a47;
+}
+#ExpertiseInfo ul li{
+  line-height: 2;
+}
+#ExhibitionsInfo{
+  padding: 70px 10px 10px 10px;
+  color:#665a47;
+  font-size: 16px;
+}
+#ExhibitionsInfo ul li{
+  line-height: 2;
+}
+#ExhibitionsInfo ul li a{
+  color: #665a47;
+}
+hr{
+  color:#665a47;
+  border: 1px solid #665a47;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#aboutInfoList ul{
+
+}
+#aboutInfoList ul li{
+  color:#665a47;
+}
+.mainBgImg{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+}
