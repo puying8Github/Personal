@@ -197,6 +197,9 @@
             else if(json.animations==2){
                 sliderAnimations.Animations2(this,json)
             }
+            else if(json.animations==3){
+                sliderAnimations.Animations3(this,json)
+            }
 
         }
 
@@ -305,6 +308,81 @@
             _this.ele.appendChild(OlObj);
             _this.ele.appendChild(UlObj);
             sliderFun.photoAlbumnUP(_this.ele,OlObj,UlObj,h)
+        },
+        Animations3:function(_this,json){
+            var js_F = _this.ele;
+            var w=json.width;
+            var h=json.height
+            setCss(js_F,{
+                overflow:'hidden',
+                width:w+'px',
+                height:h+'px',
+                background:'#33c',
+        })
+            var imgList = json.imgSrc;
+
+            var imgTemp = new Array();
+            for (i=0; i<imgList.length; i++){
+                imgTemp[i] = new Image();
+                imgTemp[i].src = imgList[i];
+            }
+            var imgs = new Array();
+
+            var imgID = 0, nextImgID, proveImgID;
+            var tf = true; //图片移动方向标志
+            var speed1 = 10; speed2 = 3000; //速度
+            function imgInit(){
+                var content = '';
+                for (i=0; i<imgList.length; i++){
+                    content += '<img src="' + imgList[i] + '" style="left:0;position:absolute; top:0; left:0; width:'+w+'px; height:'+h+'px; " />\n';
+                }
+
+                js_F.innerHTML = content;
+                imgs = js_F.getElementsByTagName('img');
+
+                imgs[0].style.zIndex = 20;
+                imgs[1].style.zIndex = 15;
+            }
+            function imgChange(){
+                if ((imgID+1)<imgList.length){
+                    nextImgID = imgID + 1;
+                } else if (imgID<imgList.length) {
+                    nextImgID = 0;
+                } else {
+                    imgID = 0;
+                    nextImgID = imgID + 1;
+                }
+                imgs[imgID].style.zIndex = 20;
+                imgs[nextImgID].style.zIndex = 15;
+                setTimeout(imgShow,speed2);
+            }
+            function imgShow(){
+                if (tf){ //imgID向左边移动2/3，nextImgID向右边1/3
+                    if (parseInt(imgs[imgID].style.left)>-w/2){
+                        imgs[imgID].style.left = (parseInt(imgs[imgID].style.left)-10) + 'px';
+                        imgs[nextImgID].style.left = (parseInt(imgs[nextImgID].style.left)+5) + 'px';
+                        setTimeout(imgShow,speed1);
+                    } else {
+                        tf = !tf;
+                        imgs[imgID].style.zIndex = 15;
+                        imgs[nextImgID].style.zIndex = 20;
+                        setTimeout(imgShow,speed1);
+                    }
+                } else {
+                    if (parseInt(imgs[imgID].style.left)<0){
+                        imgs[imgID].style.left = (parseInt(imgs[imgID].style.left)+10) + 'px';
+                        imgs[nextImgID].style.left = (parseInt(imgs[nextImgID].style.left)-5) + 'px';
+                        setTimeout(imgShow,speed1);
+                    } else {
+                        imgs[imgID].style.zIndex = 10;
+                        tf = !tf;
+                        imgID++;
+                        imgChange();
+                    }
+                }
+            }
+            imgInit();
+            imgChange();
         }
     };
     var sliderFun={
